@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M/s XYZ & Co. | Chartered Accountants</title>
+  <title>Developed by CA. Shantanu Singh Chauhan</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -90,15 +89,14 @@
 <body>
 
 <header>
-  <img src="your-logo-url.png" alt="Firm Logo" />
+  <img src="https://seeklogo.com/images/C/ca-india-logo-D2FF4EF597-seeklogo.com.png" alt="Firm Logo" width="100" height="100" />
   <h1>M/s XYZ & Co.</h1>
   <p>Chartered Accountants</p>
 </header>
 
 <main>
   <p style="font-size: 20px; color: #333; font-weight: bold;">
-    Mark your attendance below.<br>
-    Ensure your GPS is enabled.
+    This is the beta version of Employee Attendance portal developed by CA. Shantanu Singh Chauhan <br>Mark your attendance below and ensure your GPS is enabled.
   </p>
 
   <input type="text" id="name" placeholder="Enter your name" required />
@@ -109,11 +107,10 @@
 </main>
 
 <footer>
-  &copy; 2025<br>
-  M/s XYZ & Co., Chartered Accountants<br>
-  All rights reserved.
+  &copy; 2025 CA Shantanu Singh Chauhan. All rights reserved.
 </footer>
 
+<!-- JavaScript for Form Submission -->
 <script>
   function submitForm() {
     const name = document.getElementById('name').value.trim();
@@ -121,7 +118,7 @@
     const userAgent = navigator.userAgent;
 
     if (!name) {
-      document.getElementById('status').innerText = ⚠️ Please enter your name.';
+      document.getElementById('status').innerText = '⚠️ Please enter your name.';
       return;
     }
 
@@ -138,8 +135,6 @@
         data.append('longitude', lon);
         data.append('remarks', remarks);
         data.append('userAgent', userAgent);
-
-        console.log('Submitting attendance for:', name, lat, lon, remarks);
 
         fetch('https://script.google.com/macros/s/AKfycbw5xM9a5qRX3VfWPgvWEcM20OH1UJPpUar9-eW6Cw2KDswif0yDC8X8iMYAOCT5Rt8ctw/exec', {
           method: 'POST',
